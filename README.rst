@@ -23,10 +23,6 @@ Overview
     :alt: GitHub Actions Build Status
     :target: https://github.com/fvarno/logall/actions
 
-.. |requires| image:: https://requires.io/github/fvarno/logall/requirements.svg?branch=main
-    :alt: Requirements Status
-    :target: https://requires.io/github/fvarno/logall/requirements/?branch=main
-
 .. |codecov| image:: https://codecov.io/gh/fvarno/logall/branch/main/graphs/badge.svg?branch=main
     :alt: Coverage Status
     :target: https://codecov.io/github/fvarno/logall

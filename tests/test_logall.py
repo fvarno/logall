@@ -18,7 +18,3 @@ def test_main():
         for point in data_points:
             point_compose = ','.join(map(str, point))
             assert point_compose in handle.readline()
-
-
-if __name__ == "__main__":
-    test_main()

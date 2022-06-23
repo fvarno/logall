@@ -3,6 +3,8 @@ graft src
 graft ci
 graft tests
 
+prune docs/build
+
 include .cookiecutterrc
 include .coveragerc
 include .editorconfig

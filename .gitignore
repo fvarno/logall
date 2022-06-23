@@ -76,3 +76,7 @@ docs/build
 
 # mlrun of mlflow
 mlruns
+
+
+# data for tensorboard
+data

@@ -6,7 +6,7 @@ from typing import Optional
 
 import mlflow
 import polyaxon
-from torch.utils import tensorboard
+from torch.utils.tensorboard import SummaryWriter
 
 from .utils import apply_on_dict
 
@@ -76,7 +76,7 @@ class TensorboardLogger(Logger):
         super().__init__(path, ignore_patterns=ignore_patterns)
 
     def register_logger_object(self) -> Any:
-        return tensorboard.SummaryWriter(log_dir=self.get_path())
+        return SummaryWriter(log_dir=self.get_path())
 
     def log_scalar(self, key: str, value: float, step: Optional[int] = None) -> None:
         r"""log a single scalar.
@@ -106,7 +106,7 @@ class TensorboardLogger(Logger):
 
 class PyLogger(Logger):
     def __init__(
-        self, path: str, ignore_patterns: List[str] = None, filemode='w'
+        self, path: str, ignore_patterns: List[str] = None, filemode="w"
     ) -> None:
         self.filemode = filemode
         super().__init__(path, ignore_patterns=ignore_patterns)
@@ -124,7 +124,7 @@ class PyLogger(Logger):
                 return
 
         logger_ob = self.get_logger_object()
-        logger_ob.info(f'{key},{value},{step}')
+        logger_ob.info(f"{key},{value},{step}")
 
 
 class MLFlowLogger(Logger):

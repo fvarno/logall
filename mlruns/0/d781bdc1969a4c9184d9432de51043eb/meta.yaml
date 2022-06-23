@@ -1,0 +1,15 @@
+artifact_uri: file:///home/colin/Projects/research/logall/logall/mlruns/0/d781bdc1969a4c9184d9432de51043eb/artifacts
+end_time: 1656011849676
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: d781bdc1969a4c9184d9432de51043eb
+run_uuid: d781bdc1969a4c9184d9432de51043eb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1656011826804
+status: 3
+tags: []
+user_id: colin

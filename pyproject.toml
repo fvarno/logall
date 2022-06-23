@@ -5,6 +5,6 @@ requires = [
 ]
 
 [tool.black]
-line-length = 140
-target-version = ['py36']
+line-length = 88
+target-version = ['py39']
 skip-string-normalization = true

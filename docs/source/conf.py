@@ -3,6 +3,11 @@ from __future__ import unicode_literals
 
 import os
 
+import os
+import sys
+
+sys.path.insert(0, os.path.abspath("../.."))
+
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
@@ -24,15 +29,13 @@ version = release = '0.0.0'
 
 pygments_style = 'trac'
 templates_path = ['.']
-extlinks = {
-    'issue': ('https://github.com/fvarno/logall/issues/%s', '#'),
-    'pr': ('https://github.com/fvarno/logall/pull/%s', 'PR #'),
-}
 # on_rtd is whether we are on readthedocs.org
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
 if not on_rtd:  # only set the theme if we're building docs locally
-    html_theme = 'sphinx_rtd_theme'
+    html_theme = 'pydata_sphinx_theme'
+
+exclude_patterns = ["build", "**.ipynb_checkpoints", "_*"]
 
 html_use_smartypants = True
 html_last_updated_fmt = '%b %d, %Y'

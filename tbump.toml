@@ -10,23 +10,25 @@ tag_template = "v{new_version}"
 
 [[file]]
 src = "setup.py"
-search = "version='{current_version}'"
+search = 'version="{current_version}"'
+
+[[file]]
+src = "docs/source/conf.py"
+search = 'version = release = "{current_version}"'
+
 
 [[file]]
 src = "README.rst"
-search = "/v{current_version}.svg"
+search = '/v{current_version}.svg'
 
 [[file]]
 src = "README.rst"
-search = "/v{current_version}...main"
+search = '/v{current_version}...main'
 
-[[file]]
-src = "docs/conf.py"
-search = "version = release = '{current_version}'"
 
 [[file]]
 src = "src/logall/__init__.py"
-search = "__version__ = '{current_version}'"
+search = '__version__ = "{current_version}"'
 
 [[before_commit]]
 name = "check changelog"

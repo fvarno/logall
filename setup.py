@@ -75,7 +75,7 @@ setup(
         "mlflow",
     ],
     keywords="tensorboard, mlflow, logging, polyaxon",
-    python_requires=">=3.9",
+    python_requires=">=3.6",
     extras_require={
         "test": [
             "pytest",

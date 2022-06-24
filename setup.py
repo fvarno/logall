@@ -22,7 +22,7 @@ def read(*names, **kwargs):
 
 setup(
     name="fedsim",
-    version="0.0.0",
+    version="0.0.1",
     license="Apache-2.0",
     description="Unifies metric logging from various logging packages",
     long_description="{}\n{}".format(

@@ -91,7 +91,7 @@ class TensorboardLogger(Logger):
         :caption: Example
 
 
-        from fedsim import TensorboardLogger
+        from logall import TensorboardLogger
         logger = TensorboardLogger('runs')
         logger.log_scalar('loss', 2.3)
         """

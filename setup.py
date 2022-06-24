@@ -64,10 +64,10 @@ setup(
     ],
     python_requires=">=3.6",
     install_requires=[
+        "torch",
         "tensorboard",
         "polyaxon",
         "mlflow",
-        "torch",
         # eg: 'aspectlib==1.1.1', 'six>=1.7',
     ],
     extras_require={

@@ -4,50 +4,35 @@ Overview
 
 .. start-badges
 
-.. list-table::
-    :stub-columns: 1
-
-    * - docs
-      - |docs|
-    * - tests
-      - | |github-actions| |requires|
-        | |codecov|
-    * - package
-      - | |version| |wheel| |supported-versions| |supported-implementations|
-        | |commits-since|
-.. |docs| image:: https://readthedocs.org/projects/logall/badge/?style=flat
+.. image:: https://readthedocs.org/projects/logall/badge/?style=flat
     :target: https://logall.readthedocs.io/
     :alt: Documentation Status
 
-.. |github-actions| image:: https://github.com/fvarno/logall/actions/workflows/github-actions.yml/badge.svg
+.. image:: https://github.com/fvarno/logall/actions/workflows/github-actions.yml/badge.svg
     :alt: GitHub Actions Build Status
     :target: https://github.com/fvarno/logall/actions
 
-.. |requires| image:: https://requires.io/github/fvarno/logall/requirements.svg?branch=main
-    :alt: Requirements Status
-    :target: https://requires.io/github/fvarno/logall/requirements/?branch=main
-
-.. |codecov| image:: https://codecov.io/gh/fvarno/logall/branch/main/graphs/badge.svg?branch=main
+.. image:: https://codecov.io/gh/fvarno/logall/branch/main/graphs/badge.svg?branch=main
     :alt: Coverage Status
     :target: https://codecov.io/github/fvarno/logall
 
-.. |version| image:: https://img.shields.io/pypi/v/logall.svg
+.. image:: https://img.shields.io/pypi/v/logall.svg
     :alt: PyPI Package latest release
     :target: https://pypi.org/project/logall
 
-.. |wheel| image:: https://img.shields.io/pypi/wheel/logall.svg
+.. image:: https://img.shields.io/pypi/wheel/logall.svg
     :alt: PyPI Wheel
     :target: https://pypi.org/project/logall
 
-.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/logall.svg
+.. image:: https://img.shields.io/pypi/pyversions/logall.svg
     :alt: Supported versions
     :target: https://pypi.org/project/logall
 
-.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/logall.svg
+.. image:: https://img.shields.io/pypi/implementation/logall.svg
     :alt: Supported implementations
     :target: https://pypi.org/project/logall
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/fvarno/logall/v0.0.0.svg
+.. image:: https://img.shields.io/github/commits-since/fvarno/logall/v0.0.0.svg
     :alt: Commits since latest release
     :target: https://github.com/fvarno/logall/compare/v0.0.0...main
 

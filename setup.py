@@ -21,10 +21,10 @@ def read(*names, **kwargs):
 
 
 setup(
-    name="logall",
+    name="fedsim",
     version="0.0.0",
     license="Apache-2.0",
-    description="Unifies metric logging from different logging packages",
+    description="Unifies metric logging from various logging packages",
     long_description="{}\n{}".format(
         re.compile("^.. start-badges.*^.. end-badges", re.M | re.S).sub(
             "", read("README.rst")
@@ -40,18 +40,27 @@ setup(
     include_package_data=True,
     zip_safe=False,
     classifiers=[
-        "Development Status :: 5 - Production/Stable",
+        "Development Status :: 2 - Pre-Alpha",
         "Intended Audience :: Developers",
+        "Intended Audience :: Education",
         "License :: OSI Approved :: Apache Software License",
         "Operating System :: Unix",
         "Operating System :: POSIX",
         "Operating System :: Microsoft :: Windows",
+        "Intended Audience :: Science/Research",
+        "Intended Audience :: Information Technology",
+        "License :: OSI Approved :: Apache Software License",
+        "Topic :: Scientific/Engineering",
+        "Topic :: Scientific/Engineering :: Mathematics",
+        "Topic :: Scientific/Engineering :: Artificial Intelligence",
+        "Topic :: Software Development",
+        "Topic :: Software Development :: Libraries",
+        "Topic :: Software Development :: Libraries :: Python Modules",
         "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3 :: Only",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
-        "Programming Language :: Python :: Implementation :: CPython",
-        "Programming Language :: Python :: Implementation :: PyPy",
-        # uncomment if you test on these interpreters:
         "Topic :: Utilities",
     ],
     project_urls={
@@ -59,17 +68,14 @@ setup(
         "Changelog": "https://logall.readthedocs.io/en/latest/changelog.html",
         "Issue Tracker": "https://github.com/fvarno/logall/issues",
     },
-    keywords=[
-        # eg: 'keyword1', 'keyword2', 'keyword3',
-    ],
-    python_requires=">=3.6",
     install_requires=[
         "torch",
         "tensorboard",
         "polyaxon",
         "mlflow",
-        # eg: 'aspectlib==1.1.1', 'six>=1.7',
     ],
+    keywords="tensorboard, mlflow, logging, polyaxon",
+    python_requires=">=3.9",
     extras_require={
         "test": [
             "pytest",

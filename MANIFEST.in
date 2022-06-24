@@ -1,19 +1,21 @@
 graft docs
 graft src
+graft scripts
 graft ci
 graft tests
 
 prune docs/build
 
-include .cookiecutterrc
+include tbump.toml
 include .coveragerc
 include .editorconfig
-include .github/workflows/github-actions.yml
-include .pre-commit-config.yaml
 include .readthedocs.yml
 include pytest.ini
-include tbump.toml
 include tox.ini
+include .github/workflows/github-actions.yml
+include .pre-commit-config.yaml
+include codecov
+include *.sh
 
 include AUTHORS.rst
 include CHANGELOG.rst

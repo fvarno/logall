@@ -21,8 +21,8 @@ def read(*names, **kwargs):
 
 
 setup(
-    name="fedsim",
-    version="0.0.0",
+    name="logall",
+    version="0.0.1",
     license="Apache-2.0",
     description="Unifies metric logging from various logging packages",
     long_description="{}\n{}".format(

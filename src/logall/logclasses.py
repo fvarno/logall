@@ -12,7 +12,7 @@ from .utils import apply_on_dict
 
 
 class Logger(object):
-    def __init__(self, path: str, ignore_patterns: List[str] = None) -> None:
+    def __init__(self, path: str = None, ignore_patterns: List[str] = None) -> None:
         self._path = path
         if ignore_patterns is None:
             self._ignore_patterns = []
@@ -94,7 +94,7 @@ class TensorboardLogger(Logger):
         :caption: Example
 
 
-        from fedsim import TensorboardLogger
+        from logall import TensorboardLogger
         logger = TensorboardLogger('runs')
         logger.log_scalar('loss', 2.3)
         """

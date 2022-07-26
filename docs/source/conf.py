@@ -59,8 +59,8 @@ exclude_patterns = ["build", "**.ipynb_checkpoints", "_*"]
 # a list of builtin themes.
 #
 # extlinks = {
-#     "issue": ("https://github.com/fedsim-dev/fedsim/issues/%s", "#"),
-#     "pr": ("https://github.com/fedsim-dev/fedsim/pull/%s", "PR #"),
+#     "issue": ("https://github.com/fvarno/logall/issues/%s", "#"),
+#     "pr": ("https://github.com/fvarno/logall/pull/%s", "PR #"),
 # }
 
 html_theme = "pydata_sphinx_theme"

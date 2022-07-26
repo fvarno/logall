@@ -70,6 +70,9 @@ class Logger(object):
     def get_ignore_patterns(self):
         return self._ignore_patterns
 
+    def get_dir(self) -> str:
+        raise NotImplementedError
+
 
 class TensorboardLogger(Logger):
     def __init__(self, path: str, ignore_patterns: List[str] = None) -> None:
@@ -103,6 +106,9 @@ class TensorboardLogger(Logger):
         logger_ob = self.get_logger_object()
         logger_ob.add_scalar(key, value, step)
 
+    def get_dir(self):
+        return self._logger_obj.get_logdir()
+
 
 class PyLogger(Logger):
     def __init__(
@@ -126,6 +132,10 @@ class PyLogger(Logger):
         logger_ob = self.get_logger_object()
         logger_ob.info(f"{key},{value},{step}")
 
+    # TODO: implement get_dir for pylogger
+    def get_dir(self) -> str:
+        raise not NotImplementedError
+
 
 class MLFlowLogger(Logger):
     def __init__(self, path: str, ignore_patterns: List[str] = None, **kwargs) -> None:
@@ -145,6 +155,9 @@ class MLFlowLogger(Logger):
         logger_ob = self.get_logger_object()
         logger_ob.log_metric(key, value, step)
 
+    def get_dir(self) -> str:
+        return mlflow.get_artifact_uri()
+
 
 class PolyaxonLogger(MLFlowLogger):
     def __init__(self, path: str, ignore_patterns: List[str] = None, **kwargs) -> None:
@@ -154,3 +167,7 @@ class PolyaxonLogger(MLFlowLogger):
         # the following gets the active run (if any) otherwise makes new
         handle = polyaxon.tracking.init(**self.kwargs)
         return handle
+
+    # TODO: implement get_dir for polyaxon
+    def get_dir(self) -> str:
+        raise not NotImplementedError

@@ -73,6 +73,9 @@ class Logger(object):
     def get_dir(self) -> str:
         raise NotImplementedError
 
+    def flush(self) -> None:
+        raise NotImplementedError
+
 
 class TensorboardLogger(Logger):
     def __init__(self, path: str, ignore_patterns: List[str] = None) -> None:
@@ -109,6 +112,10 @@ class TensorboardLogger(Logger):
     def get_dir(self):
         return self._logger_obj.get_logdir()
 
+    def flush(self) -> None:
+        logger_ob = self.get_logger_object()
+        logger_ob.flush()
+
 
 class PyLogger(Logger):
     def __init__(
@@ -135,6 +142,11 @@ class PyLogger(Logger):
     # TODO: implement get_dir for pylogger
     def get_dir(self) -> str:
         raise not NotImplementedError
+
+    # based on 
+    # https://stackoverflow.com/questions/16633911/does-python-logging-flush-every-log
+    def flush(self):
+        return
 
 
 class MLFlowLogger(Logger):

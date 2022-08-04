@@ -143,7 +143,7 @@ class PyLogger(Logger):
     def get_dir(self) -> str:
         raise not NotImplementedError
 
-    # based on 
+    # based on
     # https://stackoverflow.com/questions/16633911/does-python-logging-flush-every-log
     def flush(self):
         return

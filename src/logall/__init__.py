@@ -7,7 +7,7 @@ from .logclasses import PolyaxonLogger
 from .logclasses import PyLogger
 from .logclasses import TensorboardLogger
 
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 
 # Set default logging handler to avoid "No handler found" warnings.
 logging.getLogger(__name__).addHandler(logging.NullHandler())

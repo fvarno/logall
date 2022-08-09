@@ -1,3 +1,5 @@
+runs/
+
 *.py[cod]
 __pycache__
 

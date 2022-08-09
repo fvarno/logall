@@ -2,6 +2,11 @@
 Changelog
 =========
 
+0.0.3 (2022-08-09)
+------------------
+
+* temporarily improved coverage for passing
+* added ignore list for flake
 
 0.0.2 (2022-06-23)
 ------------------

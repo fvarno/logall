@@ -165,9 +165,11 @@ class PolyaxonLogger(MLFlowLogger):
 
     def register_logger_object(self) -> Any:
         # the following gets the active run (if any) otherwise makes new
-        handle = polyaxon.tracking.init(**self.kwargs)
+        from polyaxon import tracking
+        handle = tracking.init(**self.kwargs)
         return handle
 
     # TODO: implement get_dir for polyaxon
     def get_dir(self) -> str:
-        raise not NotImplementedError
+        from polyaxon import tracking
+        return tracking.get_artifacts_path()

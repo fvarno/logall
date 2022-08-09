@@ -22,7 +22,7 @@ def read(*names, **kwargs):
 
 setup(
     name="logall",
-    version="0.0.3",
+    version="0.0.4",
     license="Apache-2.0",
     description="Unifies metric logging from various logging packages",
     long_description="{}\n{}".format(

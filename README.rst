@@ -32,9 +32,9 @@ Overview
     :alt: Supported implementations
     :target: https://pypi.org/project/logall
 
-.. image:: https://img.shields.io/github/commits-since/fvarno/logall/v0.0.3.svg
+.. image:: https://img.shields.io/github/commits-since/fvarno/logall/v0.0.4.svg
     :alt: Commits since latest release
-    :target: https://github.com/fvarno/logall/compare/v0.0.3...main
+    :target: https://github.com/fvarno/logall/compare/v0.0.4...main
 
 
 

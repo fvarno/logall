@@ -5,7 +5,7 @@ from typing import List
 from typing import Optional
 
 import mlflow
-import polyaxon
+from polyaxon import tracking
 from torch.utils.tensorboard import SummaryWriter
 
 from .utils import apply_on_dict
@@ -165,11 +165,9 @@ class PolyaxonLogger(MLFlowLogger):
 
     def register_logger_object(self) -> Any:
         # the following gets the active run (if any) otherwise makes new
-        from polyaxon import tracking
         handle = tracking.init(**self.kwargs)
         return handle
 
     # TODO: implement get_dir for polyaxon
     def get_dir(self) -> str:
-        from polyaxon import tracking
         return tracking.get_artifacts_path()

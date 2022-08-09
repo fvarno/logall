@@ -4,10 +4,10 @@ Pytest environment cannot write to file. T
 
 import logging
 
-from logall import PyLogger
-from logall import TensorboardLogger
 from logall import MLFlowLogger
 from logall import PolyaxonLogger
+from logall import PyLogger
+from logall import TensorboardLogger
 from logall.utils import apply_on_dict
 
 data_points = [
@@ -35,6 +35,7 @@ def test_plxlogger():
     plx_logger = PolyaxonLogger(None, is_offline=True)
     assert plx_logger.get_dir() is not None
 
+
 def test_mlflogger():
     mlf_logger = MLFlowLogger(None)
     assert mlf_logger.get_dir() is not None
@@ -42,10 +43,11 @@ def test_mlflogger():
 
 def test_apply_on_dict():
     sample_dict = dict(a_1=2, b_3=5)
+
     def fn(key, val):
-        k, factor = key.split('_')
+        _, factor = key.split("_")
         return int(factor) * val
 
     res = apply_on_dict(sample_dict, fn, return_as_dict=True)
-    assert res['a_1'] == 2
-    assert res['b_3'] == 15
+    assert res["a_1"] == 2
+    assert res["b_3"] == 15
